@@ -1,0 +1,32 @@
+<%= form_with(model: developer) do |form| %>
+  <% if developer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(developer.errors.count, "error") %> prohibited this developer from being saved:</h2>
+
+      <ul>
+        <% developer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :surname %>
+    <%= form.text_field :surname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_id %>
+    <%= form.text_field :project_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
