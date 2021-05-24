@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Antigenos:</strong>
+  <%= @mivacuna.antigenos %>
+</p>
+
+<p>
+  <strong>Lipidos:</strong>
+  <%= @mivacuna.lipidos %>
+</p>
+
+<p>
+  <strong>Conservantes:</strong>
+  <%= @mivacuna.conservantes %>
+</p>
+
+<%= link_to 'Edit', edit_mivacuna_path(@mivacuna) %> |
+<%= link_to 'Back', mivacunas_path %>

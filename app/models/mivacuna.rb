@@ -1,0 +1,2 @@
+class Mivacuna < ApplicationRecord
+end
