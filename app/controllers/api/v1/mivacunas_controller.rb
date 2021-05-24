@@ -14,7 +14,7 @@ module Api
   end
   
   def index
-          render json: Vacuna.all, status: :ok
+          render json: mivacuna.all, status: :ok
   end
 
   private
