@@ -5,11 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Nombre paciente</th>
-      <th>Apellidos paciente</th>
+      <th>Nombre</th>
+      <th>Apellidos</th>
       <th>Fecha</th>
-      <th>Dni</th>
-      <th colspan="3"></th>
+      <th>DNI</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -20,9 +20,9 @@
         <td><%= diario.apellidos_paciente %></td>
         <td><%= diario.fecha %></td>
         <td><%= diario.dni %></td>
-        <td><%= link_to 'Show', diario %></td>
-        <td><%= link_to 'Edit', edit_diario_path(diario) %></td>
-        <td><%= link_to 'Destroy', diario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', diario %></td>
+        <td><%= link_to 'Editar', edit_diario_path(diario) %></td>
+        <td><%= link_to 'Eliminar', diario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
