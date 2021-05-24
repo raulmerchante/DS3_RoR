@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Desechos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id vacuna desechada</th>
+      <th>Porcentaje eficiencia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @desechos.each do |desecho| %>
+      <tr>
+        <td><%= desecho.id_vacuna_desechada %></td>
+        <td><%= desecho.porcentaje_eficiencia %></td>
+        <td><%= link_to 'Show', desecho %></td>
+        <td><%= link_to 'Edit', edit_desecho_path(desecho) %></td>
+        <td><%= link_to 'Destroy', desecho, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Desecho', new_desecho_path %>

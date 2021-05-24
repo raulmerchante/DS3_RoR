@@ -1,0 +1,2 @@
+class Desecho < ApplicationRecord
+end

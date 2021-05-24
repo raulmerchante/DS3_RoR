@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :desechos
   resources :diarios
   resources :mivacunas
   resources :developers

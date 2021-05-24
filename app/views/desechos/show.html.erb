@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id vacuna desechada:</strong>
+  <%= @desecho.id_vacuna_desechada %>
+</p>
+
+<p>
+  <strong>Porcentaje eficiencia:</strong>
+  <%= @desecho.porcentaje_eficiencia %>
+</p>
+
+<%= link_to 'Edit', edit_desecho_path(@desecho) %> |
+<%= link_to 'Back', desechos_path %>

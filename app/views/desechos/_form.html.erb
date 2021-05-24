@@ -1,0 +1,27 @@
+<%= form_with(model: desecho) do |form| %>
+  <% if desecho.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(desecho.errors.count, "error") %> prohibited this desecho from being saved:</h2>
+
+      <ul>
+        <% desecho.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_vacuna_desechada %>
+    <%= form.number_field :id_vacuna_desechada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :porcentaje_eficiencia %>
+    <%= form.number_field :porcentaje_eficiencia %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
