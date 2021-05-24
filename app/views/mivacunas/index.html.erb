@@ -5,22 +5,20 @@
 <table>
   <thead>
     <tr>
-      <th>Antigenos</th>
-      <th>Lipidos</th>
-      <th>Conservantes</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      
+      <th colspan="1"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @mivacunas.each do |mivacuna| %>
       <tr>
-        <td><%= mivacuna.antigenos %></td>
-        <td><%= mivacuna.lipidos %></td>
-        <td><%= mivacuna.conservantes %></td>
-        <td><%= link_to 'Show', mivacuna %></td>
-        <td><%= link_to 'Edit', edit_mivacuna_path(mivacuna) %></td>
-        <td><%= link_to 'Destroy', mivacuna, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= mivacuna.id %></td>
+
+        <td><%= link_to 'Mostrar', mivacuna %></td>
+        <td><%= link_to 'Editar', edit_mivacuna_path(mivacuna) %></td>
+        <td><%= link_to 'Eliminar', mivacuna, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Mivacuna', new_mivacuna_path %>
+<%= link_to 'Nueva vacuna', new_mivacuna_path %>
