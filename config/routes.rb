@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'vacunas/index'
   resources :developers
   resources :projects
   root "projects#index"
