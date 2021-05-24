@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :team
       t.text :info
+      t.string :textoprueba
 
       t.timestamps
     end
