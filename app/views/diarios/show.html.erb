@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre paciente:</strong>
+  <%= @diario.nombre_paciente %>
+</p>
+
+<p>
+  <strong>Apellidos paciente:</strong>
+  <%= @diario.apellidos_paciente %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @diario.fecha %>
+</p>
+
+<p>
+  <strong>Dni:</strong>
+  <%= @diario.dni %>
+</p>
+
+<%= link_to 'Edit', edit_diario_path(@diario) %> |
+<%= link_to 'Back', diarios_path %>

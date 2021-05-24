@@ -1,0 +1,2 @@
+class Diario < ApplicationRecord
+end

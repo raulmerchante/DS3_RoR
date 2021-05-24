@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_24_100714) do
+ActiveRecord::Schema.define(version: 2021_05_24_105725) do
 
   create_table "developers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 2021_05_24_100714) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["project_id"], name: "index_developers_on_project_id"
     t.index ["surname"], name: "index_developers_on_surname"
+  end
+
+  create_table "diarios", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "nombre_paciente"
+    t.string "apellidos_paciente"
+    t.string "fecha"
+    t.string "dni"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "mivacunas", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
