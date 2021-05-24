@@ -1,28 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Vacunas</h1>
+<h1>Projects</h1>
 
 <table>
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Antigenos</th>
-      <th>Lipidos</th>
-      <th>Conservantes</th>
-      <th colspan="4"></th>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Info</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @prueba_vacuna.each do |prueba_vacuna| %>
+    <% @projects.each do |project| %>
       <tr>
-        <td><%= prueba_vacuna.id %></td>
-        <td><%= prueba_vacuna.antigenos %></td>
-        <td><%= prueba_vacuna.lipidos %></td>
-        <td><%= prueba_vacuna.conservantes %></td>
-        <td><%= link_to 'Mostrar', prueba_vacuna %></td>
-        <td><%= link_to 'Editar', edit_project_path(prueba_vacuna) %></td>
-        <td><%= link_to 'Destruir', prueba_vacuna, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+        <td><%= project.name %></td>
+        <td><%= project.team %></td>
+        <td><%= project.info %></td>
+        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Vacuna', new_project_path %>
+<%= link_to 'New Project', new_project_path %>
