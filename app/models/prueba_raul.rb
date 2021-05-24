@@ -1,0 +1,2 @@
+class PruebaRaul < ApplicationRecord
+end
