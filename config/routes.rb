@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :mivacunas
   resources :developers
   resources :projects
-  root "mivacunas#index"
+  root "developers#index"
 
   namespace :api, defaults: { format: 'json' }  do
     namespace :v1 do
