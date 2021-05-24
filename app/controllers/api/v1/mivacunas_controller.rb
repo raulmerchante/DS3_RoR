@@ -1,11 +1,11 @@
 module Api
   module V1
-    class VacunaController < ApplicationController
+    class MivacunasController < ApplicationController
   
   skip_before_action :verify_authenticity_token
   
   def show
-        @mivacuna = Vacuna.find_by(id: params[:id])
+        @mivacuna = Mivacuna.find_by(id: params[:id])
         if (@mivacuna!=nil)
           render json: @mivacuna, status: :ok
     else
@@ -14,7 +14,7 @@ module Api
   end
   
   def index
-          render json: mivacuna.all, status: :ok
+          render json: Mivacuna.all, status: :ok
   end
 
   private
