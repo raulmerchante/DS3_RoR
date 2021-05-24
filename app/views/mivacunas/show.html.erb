@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>ID:</strong>
+  <%= @mivacuna.id %>
+</p>
+
+<p>
   <strong>Antigenos:</strong>
   <%= @mivacuna.antigenos %>
 </p>
@@ -15,5 +20,5 @@
   <%= @mivacuna.conservantes %>
 </p>
 
-<%= link_to 'Edit', edit_mivacuna_path(@mivacuna) %> |
-<%= link_to 'Back', mivacunas_path %>
+<%= link_to 'Editar', edit_mivacuna_path(@mivacuna) %> |
+<%= link_to 'Atrás', mivacunas_path %>
