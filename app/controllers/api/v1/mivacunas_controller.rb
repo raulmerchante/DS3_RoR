@@ -17,6 +17,15 @@ module Api
           render json: Mivacuna.all, status: :ok
   end
 
+  def destroy
+    @mivacuna = Mivacuna.find(params[:id])
+    if @mivacuna.destroy
+      render json: :nothing, status: :ok
+    else
+      render json: :nothing, status: :unprocessable_entity
+    end
+end
+
   private
   def project_params
         params.require(:mivacuna).permit(:id, :antigenos, :lipidos, :conservantes)
