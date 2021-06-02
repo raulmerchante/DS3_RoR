@@ -5,7 +5,7 @@ module Api
   skip_before_action :verify_authenticity_token
   
   def create
-    @diario = Diario.new(project_params)
+    @diario = Diario.new(diario_params)
 
       if @diario.save
         render json: @diario, status: :created
@@ -20,7 +20,7 @@ end
 
 
   private
-  def project_params
+  def diario_params
         params.require(:diario).permit(:nombre_paciente, :apellidos_paciente, :fecha, :dni)
   end
   end
