@@ -4,6 +4,19 @@ module Api
   
   skip_before_action :verify_authenticity_token
   
+  def show
+    @diario = Diario.find_by(id: params[:id])
+    if (@diario!=nil)
+      render json: @diario, status: :ok
+else
+     render json: :nothing, status: :not_found
+  end
+end
+
+def index
+  render json: Diario.all, status: :ok
+end
+
   def create
     @diario = Diario.new(diario_params)
 
@@ -14,9 +27,7 @@ module Api
       end
 end
   
-  def index
-          render json: Diario.all, status: :ok
-  end
+ 
 
 
   private
