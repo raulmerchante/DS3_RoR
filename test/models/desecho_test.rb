@@ -2,6 +2,6 @@ require "test_helper"
 
 class DesechoTest < ActiveSupport::TestCase
   test "the truth" do
-    assert true, "prueba buena"
+    assert_not true, "prueba buena"
   end
 end
