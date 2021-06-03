@@ -1,6 +1,6 @@
 class DiarioTest < ActionDispatch::IntegrationTest 
     test "can see the welcome page" do
         get "/"
-        assert_select "h1", "Diarios#index" 
+        assert_select "h1", "VacunaT#index" 
     end
 end
