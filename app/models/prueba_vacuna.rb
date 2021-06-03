@@ -1,2 +1,0 @@
-class PruebaVacuna < ApplicationRecord
-end
